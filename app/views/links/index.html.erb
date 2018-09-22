@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Links</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+
+  <tbody>
+    <% @links.each do |link| %>
+      <tr>
+        <td><%= link.url %></td>
+        <td><%= link_to 'Show', campaign_link_path(id: link.id) %></td>
+        <td><%= link_to 'Edit', edit_campaign_link_path(id: link.id) %></td>
+        <td><%= link_to 'Destroy', campaign_link_path(id: link.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Link', new_campaign_link_path %>
+
+
+<td><%= link_to 'Back', campaign_path(@campaign) %></td>
+
+
+<td><%= link_to 'Take screenshots', take_screenshot_campaign_links_path, method: :post %></td>
+
+<td><%= link_to 'Download', create_zip_campaign_links_path %></td>
+
+
+<h4>Import Links From CSV</h4>
+  <%= form_tag import_campaign_links_path, multipart: true do%>
+    <%=file_field_tag :file%>
+    <%=submit_tag "Import CSV"%>
+  <% end %>
+

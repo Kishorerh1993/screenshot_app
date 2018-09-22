@@ -1,0 +1,10 @@
+<h1>Edit Link</h1>
+
+<%= form_tag campaign_link_path(@campaign) ,:method => :patch do%>
+  <%=label_tag "Link"%>
+  <%= text_field_tag "link"%>
+  <%= submit_tag "Update" ,class: "btn btn-default"%>
+<% end %>
+
+<%= link_to 'Show', campaign_link_path(@link) %> |
+<%= link_to 'Back', campaign_links_path(@link) %>
