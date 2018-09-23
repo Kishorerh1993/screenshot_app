@@ -2,7 +2,7 @@ class LinksController < ApplicationController
   before_action do
     @campaign = Campaign.find(params[:campaign_id])
   end
-  before_action :set_link, only: [:show, :edit, :update, :destroy]
+  before_action :set_link, only: [:show, :edit, :update, :destroy ,:take_screenshot]
 
   # GET /links
   # GET /links.json
@@ -83,6 +83,7 @@ class LinksController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_link
+      @campaign = Campaign.find(params[:campaign_id])
       @link =  @campaign.links.find(params[:id])
     end
 
