@@ -12,7 +12,8 @@ gem 'hirb'
 gem 'pg', group: :production
 gem 'rails_12factor'
 gem 'rubyzip'
-gem 'phantomjs', :require => 'phantomjs/poltergeist' ,group: :production
+gem 'jquery-rails'
+# gem 'phantomjs', :require => 'phantomjs/poltergeist' ,group: :production
 
 gem 'poltergeist'
 

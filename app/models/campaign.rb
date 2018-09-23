@@ -1,6 +1,6 @@
 class Campaign < ApplicationRecord
   has_many :links
-  require 'phantomjs'
+  # require 'phantomjs'
   require 'capybara/poltergeist'
   require 'zip'
 
