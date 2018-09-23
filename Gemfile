@@ -12,6 +12,7 @@ gem 'hirb'
 gem 'pg', group: :production
 gem 'rails_12factor'
 gem 'rubyzip'
+gem 'phantomjs'
 
 gem 'poltergeist'
 
