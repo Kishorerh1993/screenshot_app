@@ -1,5 +1,6 @@
 class Campaign < ApplicationRecord
   has_many :links
+  validates :name, uniqueness: true
   # require 'phantomjs'
   require 'capybara/poltergeist'
   require 'zip'
