@@ -17,7 +17,7 @@
         <td><%= link_to 'Show', campaign %></td>
         <td><%= link_to 'Edit', edit_campaign_path(campaign) %></td>
         
-        <td><%= link_to 'Destroy', campaign, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', campaign, :html => { :method => :delete }, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

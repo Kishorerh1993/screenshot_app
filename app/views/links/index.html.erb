@@ -17,7 +17,7 @@
         <td><%= link.url %></td>
         <td><%= link_to 'Show', campaign_link_path(id: link.id) %></td>
         <td><%= link_to 'Edit', edit_campaign_link_path(id: link.id) %></td>
-        <td><%= link_to 'Destroy', campaign_link_path(id: link.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', campaign_link_path(id: link.id), :html => { :method => :delete }, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -41,4 +41,16 @@
     <%=file_field_tag :file%>
     <%=submit_tag "Import CSV"%>
   <% end %>
+
+
+<div>
+  <h4>Take Screenshot</h4>
+    <%= form_tag take_screenshot_campaign_links_path(@campaign.id) do%>
+      <%=submit_tag "Take Screenshot"%>
+    <% end %>
+</div>
+
+<div>
+  <td><%= link_to 'Download', create_zip_campaign_links_path %></td>  
+</div>
 
