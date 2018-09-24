@@ -8,6 +8,7 @@ gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', git: "https://github.com/larskanis/sqlite3-ruby", branch: "add-gemspec", group: :development
 gem 'hirb'
+gem 'phantomjs', :require => 'phantomjs/poltergeist', group: :production
 
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production
