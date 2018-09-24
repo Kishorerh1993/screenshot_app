@@ -18,6 +18,9 @@
         <td><%= link_to 'Show', campaign_link_path(id: link.id) %></td>
         <td><%= link_to 'Edit', edit_campaign_link_path(id: link.id) %></td>
         <td><%= link_to 'Destroy', campaign_link_path(id: link.id), :html => { :method => :delete }, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= form_tag campaign_link_path(id: link.id), method: "delete" do %>
+          <%=submit_tag "terminate"%></td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>
@@ -53,4 +56,8 @@
 <div>
   <td><%= link_to 'Download', create_zip_campaign_links_path %></td>  
 </div>
+
+
+
+
 
