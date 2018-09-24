@@ -10,7 +10,8 @@ gem 'sqlite3', git: "https://github.com/larskanis/sqlite3-ruby", branch: "add-ge
 gem 'hirb'
 
 gem 'pg', group: :production
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
+gem 'rails_serve_static_assets'
 gem 'rubyzip'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'rails-ujs', '~> 0.1.0'
