@@ -1,6 +1,5 @@
 class Link < ApplicationRecord
   belongs_to :campaign
-  validates :url, uniqueness: true
   require 'csv'
   require 'capybara/poltergeist'
 
