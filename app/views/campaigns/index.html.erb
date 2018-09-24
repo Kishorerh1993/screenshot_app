@@ -16,8 +16,10 @@
         <td><%= campaign.name %></td>
         <td><%= link_to 'Show', campaign %></td>
         <td><%= link_to 'Edit', edit_campaign_path(campaign) %></td>
+        <td><%= form_tag campaign, method: "delete" ,data: { confirm: 'Are you sure?' } do %>
+          <%=submit_tag "Delete"%></td>
+        <%end%>
         
-        <td><%= link_to 'Destroy', campaign, :html => { :method => :delete }, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
