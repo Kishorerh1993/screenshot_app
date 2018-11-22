@@ -15,4 +15,34 @@
 //= require rails-ujs
 //= require activestorage
 
+// $(document).ready(function(){
+//     $("button").click(function(){
+      
+//       $.getJSON('/campaigns/'+ $("#campaign_id").val() +'.json', function(jd) {
+//         $.each( jd.Links, function( i, val ) {
+//           $("button").hide();
+//           $('#stage').append('<p> Campaignid: ' + val.campaign_id + '</p>');
+//           $('#stage').append('<p>Age : ' + val.url+ '</p>');
+//         });
+                  
+//       });
+//     });
+// });
+
+// $(document).ready(function () {
+//   $("button").click(function(){
+//     $.ajax({ 
+//         type: 'GET', 
+//         url: '/campaigns/8.json', 
+//         data: { get_param: 'links' }, 
+//         success: function (data) { 
+//          for (var i=0;i<data.length;++i)
+//          {
+//          $('#stage').append('<div class="name">data[i].url</>');
+//          }
+//         }
+//     });
+//   });
+// });
+
 

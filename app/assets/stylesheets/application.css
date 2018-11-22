@@ -13,3 +13,51 @@
  *= require_tree .
  *= require_self
  */
+
+.navbar.navbar-inverse .navbar-header {
+    text-align: center;
+    width: 100%;
+}
+
+.navbar.navbar-inverse .navbar-header .navbar-brand {
+    display: inline-block;
+    float: none;
+}
+
+.text-right{
+  margin-right: 100px;
+}
+
+.btn-default {
+  padding: 6px 30px;
+}
+
+.middle{
+  margin-top: 0px;
+  background-color: grey;
+}
+.table td {
+   text-align: center;   
+}
+.ref
+{
+    margin-top:  50px;
+    margin-left: 100px;
+    margin-right:100px;
+}
+
+.btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+    width:100%;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: RoyalBlue;
+}
+

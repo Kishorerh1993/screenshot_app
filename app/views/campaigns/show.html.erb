@@ -1,11 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @campaign.name %>
-</p>
+<div >
+  <h1 style="color: grey;" class="text-center"><%= @campaign.name %></h1>
+</div>
 
-<%= link_to 'Edit', edit_campaign_path(@campaign) %> 
-<%= link_to 'Back', campaigns_path %>
-<%= link_to 'Links', campaign_links_path(@campaign) %>
+</br>
+
+<div style="clear: both" >
+  <p  class="text-right">To add Links</p>
+  <h2 style="float: right" ><%= link_to ' ADD Links', campaign_links_path(@campaign) %></h2>
+  <h2 style="float: center" ><%= link_to 'Edit', edit_campaign_path(@campaign) %></h2>
+  <h2 ><%= link_to 'Back', campaigns_path %></h2>
+</div>
+
+
+
+
+
 

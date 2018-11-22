@@ -7,7 +7,7 @@ class LinksController < ApplicationController
   # GET /links
   # GET /links.json
   def index
-    @links = @campaign.links.all
+    @links = @campaign.links.all.paginate(page:params[:page],per_page: 10)
   end
 
 
@@ -28,6 +28,7 @@ class LinksController < ApplicationController
   # GET /links/1
   # GET /links/1.json
   def show
+    @link = @campaign.links.find(params[:id])
   end
 
   # GET /links/new

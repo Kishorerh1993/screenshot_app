@@ -4,12 +4,19 @@ class CampaignsController < ApplicationController
   # GET /campaigns
   # GET /campaigns.json
   def index
-    @campaigns = Campaign.all
+    @campaigns = Campaign.all.paginate(page:params[:page],per_page: 5)
   end
 
   # GET /campaigns/1
   # GET /campaigns/1.json
   def show
+    @campaign = Campaign.find(params[:id])
+    respond_to do |format|
+
+      format.html # show.html.erb
+      format.json { render json: {"id": @campaign.id, "Links": @campaign.links} }
+
+    end
   end
 
   # GET /campaigns/new
